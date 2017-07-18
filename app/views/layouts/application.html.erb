@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ttwwrr</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header> 
+   <ul>
+    <li><%= link_to "Ttwwrr", root_path %></li>
+    <li><%= link_to "ぼやき一覧", blogs_path %></li>
+   </ul>
+  </header>
+
+<%= yield %>
+
+  <footer>
+  <p>アプリ練習</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+header ul{
+  width: 100%;
+  height: 54px;
+  background-color: #FFFFFF;
+}
+
+header ul{
+    margin: 0 auto;
+    list-style:none; 
+}
+
+header ul a {
+   display:block;
+   padding:15px;
+   text-decoration: none;
+   color:SlateGray;
+}
+
+header li{
+   float: left;
+   width: auto;
+}
+
+body{
+   text-align: center
+}
+
+
+.main-header {
+  padding-bottom: 1%;
+  width: 100%;
+  font-size: 34px;
+  background-color: SlateGray;
+  color:White;
+}
+
+.about{
+  background-color: SlateGray;
+  color:White;
+  padding: 100px;
+}
+
+
+
+footer{
+    position:fixed;;
+    bottom:0;
+    width:100%;
+    background-color: #FFFFFF;
+    color:SlateGray;
+    height:50px;
+}
+
+.wrapper {
+  margin-bottom: 74px;
+  padding: 20px 20px 20px 35px;
+  .row {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    text-align: left;
+    word-wrap: break-word;
+  }
+}
+input[type="submit"].btn-block{
+  margin: 15px 0;
+}
+
+.container{
+  padding-bottom: 85px;
+}
