@@ -48,6 +48,8 @@ gem 'omniauth-facebook'
 group :development do
   gem 'letter_opener_web'
   gem 'dotenv-rails'
+  gem 'pry-rails'
+  gem 'better_errors'
 end
 
 group :development, :test do

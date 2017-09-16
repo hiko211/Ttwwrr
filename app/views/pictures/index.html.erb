@@ -7,9 +7,11 @@
    <% @picture.each do |picture| %>
     <div class="row">
     <p><%= image_tag(picture.image) %></p>
+    <p>ユーザー名:<%= picture.user.name %></p>
 
-    <%= link_to "ぼやきを編集する", edit_picture_path(picture.id), class:'btn btn-default btn-sm btn-success'%>
-    <%= link_to 'ぼやきを削除する', picture_path(picture.id), method: :delete, data: { confirm: '消すで？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+
+    <%= link_to "写真を編集する", edit_picture_path(picture.id), class:'btn btn-default btn-sm btn-success'%>
+    <%= link_to '写真を削除する', picture_path(picture.id), method: :delete, data: { confirm: '消すで？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
     </div>
    <% end %>
  </div>
