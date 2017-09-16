@@ -43,6 +43,8 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
+gem 'cancan'
+
 
 
 group :development do
