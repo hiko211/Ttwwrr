@@ -12,6 +12,7 @@
    <ul>
     <li><%= link_to "Instaggg", root_path %></li>
     <#li><#%= link_to "ぼやき一覧", blogs_path %></#li>
+    <li><%= link_to "写真一覧", pictures_path %></li>
     <% if user_signed_in? %>
     <li><%= link_to 'マイページ', edit_user_registration_path %></li>
     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
