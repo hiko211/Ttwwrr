@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
- before_action :set_blog, only: [:edit, :update, :destroy]
+ before_action :set_blog, only: [:edit, :show, :update, :destroy]
  before_action :authenticate_user!
 
   def index
@@ -26,6 +26,11 @@ class BlogsController < ApplicationController
   def edit
   end
 
+  def show
+   @comment = @blog.comments.build
+   @comments = @blog.comments
+  end
+
   def update
    # binding.pry
    if @blog.update(blogs_params)
@@ -47,7 +52,7 @@ class BlogsController < ApplicationController
 
   private
     def blogs_params
-      params.require(:blog).permit(:content)
+      params.require(:blog).permit(:title, :content)
     end
 
     def set_blog

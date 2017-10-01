@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   #get 'pictures/index'
   get 'top/index'
@@ -15,10 +16,15 @@ Rails.application.routes.draw do
   end
 
 
-  resources :blogs, only: [:index, :new, :create, :edit, :update ,:destroy] do
+  resources :blogs, only: [:index, :show, :new, :create, :edit, :update ,:destroy] do
     collection do
       post :confirm
     end
+  end
+
+  resources :blogs do
+   resources :comments
+   post :confirm, on: :collection
   end
 
   resources :pictures, only: [:index, :new, :create, :edit, :update ,:destroy]
