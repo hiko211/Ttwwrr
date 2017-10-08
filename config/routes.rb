@@ -16,11 +16,11 @@ Rails.application.routes.draw do
   end
 
 
-  resources :blogs, only: [:index, :show, :new, :create, :edit, :update ,:destroy] do
-    collection do
-      post :confirm
-    end
-  end
+  # resources :blogs, only: [:index, :show, :new, :create, :edit, :update ,:destroy] do
+  #   collection do
+  #     post :confirm
+  #   end
+  # end
 
   resources :blogs do
    resources :comments
@@ -28,6 +28,14 @@ Rails.application.routes.draw do
   end
 
   resources :pictures, only: [:index, :new, :create, :edit, :update ,:destroy]
+
+  resources :users, only: [:index]
+
+  resources :relationships, only: [:create, :destroy]
+
+  resources :conversations do
+  resources :messages
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
