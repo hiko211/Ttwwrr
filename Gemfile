@@ -45,6 +45,8 @@ gem 'omniauth-facebook'
 
 gem 'cancan'
 
+gem 'faker'
+
 
 
 group :development do
