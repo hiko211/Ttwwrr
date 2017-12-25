@@ -47,6 +47,8 @@ gem 'cancan'
 
 gem 'faker'
 
+gem 'fog'
+
 
 
 group :development do
