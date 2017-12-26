@@ -1,5 +1,5 @@
 class Blog < ActiveRecord::Base
-    validates :content, presence: true
+    validates_presence_of :content, :title
     validates :content, length: { maximum: 140 }
 
     belongs_to :user
