@@ -4,7 +4,7 @@
       <div class="comment_<%= comment.id %>">
         <li>
           <p class="left"><%= comment.user.name %>さんがコメントしました。</p>
-          <p class="left"><%= comment.content %></p>
+          <p class="left comment_field"><%= comment.content %></p>
           <% if current_user.id == comment.user.id %>
             <p class="right">
               <%= link_to '', edit_blog_comment_path(blog, comment), class: "fa fa-pencil-square-o fa-lg", method: :get, remote: true %>
@@ -12,7 +12,7 @@
             </p>
           <% end %>
         </li>
-      <div>
+      </div>
     <% end %>
   <% end %>
 </ul>

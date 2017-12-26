@@ -10,7 +10,19 @@
   blog = Blog.create!(
                title: "test",
                content: "test",
-#               user_id: user_id,
+               )
+  #blog.user_id = "1"
+end
 
+
+10.times do |n|
+  email = Faker::Internet.email
+  password = "password"
+  user.skip_confirmation!
+  user = User.create!(email: email,
+               password: password,
+               password_confirmation: password,
+               name: "hogehgoe",
+               uid: SecureRandom.hex(10),
                )
 end
